@@ -1,0 +1,11 @@
+<a *ngIf="!menuNode.notLocal" [routerLink]="menuNode.url"
+   [ngClass]="{'active': currentRouteIs([menuNode.url])}"
+   class="sidebar-menu-link">
+  {{menuNode.label}}
+</a>
+<a *ngIf="menuNode.notLocal"
+   [href]="menuNode.url" target='_blank'
+   rel="noopener"
+   class="sidebar-menu-link">
+  {{menuNode.label}}
+</a>

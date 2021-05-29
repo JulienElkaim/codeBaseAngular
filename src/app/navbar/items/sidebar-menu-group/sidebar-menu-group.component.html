@@ -1,0 +1,15 @@
+<div *ngIf="nodeIsGroup(menuNode)">
+  <div class="sidebar-menu-group-header"
+       (click)="menuNode.expanded = !menuNode.expanded">
+    {{getAsGroup()?.label}}
+  </div>
+  <div [ngClass]="{'expanded': getAsGroup()?.expanded}" class="sidebar-menu-group-content">
+    <app-sidebar-menu-group class="sidebar-menu-group-sub-level"
+      *ngFor="let node of getAsGroup()?.menuNodes || []" [menuNode]="node">
+    </app-sidebar-menu-group>
+  </div>
+</div>
+
+
+<app-sidebar-menu-link *ngIf="nodeIsLink(menuNode)" [menuNode]="getAsLink()">
+</app-sidebar-menu-link>

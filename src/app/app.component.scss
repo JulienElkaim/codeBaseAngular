@@ -1,0 +1,10 @@
+:host{
+  display: flex;
+
+  .app-content{
+    background-color: #f8f9fa;
+    flex-grow: 1;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
