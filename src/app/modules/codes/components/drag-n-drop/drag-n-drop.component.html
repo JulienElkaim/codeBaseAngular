@@ -7,11 +7,26 @@
   object before receiving the DropEvent, with the object inside.
 </p>
 
+
+<div class="page-demo">
+
+
+</div>
 <h2 class="page-title">
   Draggable Directive
 </h2>
 
 <p>
-  To make an object draggable, it has to implement <strong class="code" >DraggableType&ltT&gt</strong>.
+  To make an object draggable, you have to implement <strong class="code" >DraggableType&lt;T&gt;</strong>.
+  You can choose to represent the Object as String the way you want. Default is using <strong class="code">
+  JSON.stringify()</strong> function.
+  <br>
+  In the following example, Dog are hiding their color when they get dragged.
 </p>
 <app-code-base [githubRaw]="interfaceDraggableType"></app-code-base>
+
+<br>
+
+<p>
+  To provide
+</p>
