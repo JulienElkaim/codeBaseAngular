@@ -1,0 +1,37 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  .dog {
+    padding: 2rem 3rem;
+    border: 1px lightgrey solid;
+
+    &.dog-draggable {
+      background: white;
+      margin-left: auto;
+
+      &.blue {
+        color: blue;
+        animation: pulsateShadow 3s ease-out infinite;
+      }
+
+      &.pink {
+        color: deeppink;
+      }
+    }
+
+    &.dog-droppable {
+      background-color: grey;
+
+      &.success {
+        background-color: #33FF3355;
+      }
+
+      &.error {
+        background-color: #FF333355;
+      }
+    }
+  }
+}
+

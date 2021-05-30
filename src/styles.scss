@@ -36,8 +36,12 @@ h2.page-title {
   }
 }
 
+p{
+  line-height: 2rem;
+}
 .page-abstract {
   color: #444;
+  line-snap: 5px;
   font-size: .9rem;
   text-align: center;
   line-height: 1.4rem;
@@ -46,9 +50,11 @@ h2.page-title {
 }
 
 .page-demo{
-  border-top: 3px grey dashed;
-  border-bottom: 3px grey dashed;
+  border: 3px grey dashed;
+  border-radius: 8px;
   padding: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 

@@ -5,10 +5,10 @@ import {take} from "rxjs/operators";
 
 @Component({
   selector: 'app-drag-n-drop',
-  templateUrl: './drag-n-drop.component.html',
-  styleUrls: ['./drag-n-drop.component.scss']
+  templateUrl: './drag-n-drop-page.component.html',
+  styleUrls: ['./drag-n-drop-page.component.scss']
 })
-export class DragNDropComponent implements OnInit {
+export class DragNDropPageComponent implements OnInit {
 
   interfaceDraggableType: string[] = [
     "src/app/modules/codes/components/drag-n-drop/src/model/draggable-type.ts",

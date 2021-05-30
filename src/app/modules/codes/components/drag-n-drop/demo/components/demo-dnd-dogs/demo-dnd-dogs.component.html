@@ -1,0 +1,32 @@
+<div class="dog dog-draggable"
+     clazzOnDragging="blue"
+     [data]="dog1"
+     appDraggable>
+  {{greet(dog1)}}
+</div>
+
+<div class="dog dog-draggable"
+     [data]="dog2"
+     clazzOnDragging="pink"
+     appDraggable>
+  {{greet(dog2)}}
+</div>
+
+<div class="dog dog-droppable"
+     (dropSuccess)="dataReceived($event)"
+     (dropError)="onDropError($event)"
+
+     [validator]="dogType.defaultValidator"
+     [transform]="dogType.of"
+     clazzOnHover="pulsing-border"
+     clazzOnDropError="error"
+     clazzOnDropSuccess="success"
+     appDroppable>
+  <span *ngIf="!!droppedDog; else emptyMessage">
+    {{droppedDog.bark}}
+  </span>
+  <ng-template #emptyMessage>
+    <span>What does the dog says?</span>
+  </ng-template>
+  <span *ngIf="!!dropErrorMessage" [title]="dropErrorMessage"> Refused!</span>
+</div>

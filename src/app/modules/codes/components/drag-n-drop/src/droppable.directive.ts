@@ -8,7 +8,7 @@ export type DropError = { error: TypeValidationError, value: null | any | string
   selector: '[appDroppable]'
 })
 export class DroppableDirective<T extends DraggableType<T>> {
-  @Input() data!: T;
+  @Input() type?: new () => T; // Simple declaration for linter, could be dumped in final version.
   @Output() dropSuccess = new EventEmitter<T>();
   @Output() dropError = new EventEmitter<DropError>();
 

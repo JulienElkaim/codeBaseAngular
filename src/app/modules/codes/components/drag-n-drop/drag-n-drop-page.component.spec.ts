@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DragNDropComponent } from './drag-n-drop.component';
+import { DragNDropPageComponent } from './drag-n-drop-page.component';
 
 describe('DragNDropComponent', () => {
-  let component: DragNDropComponent;
-  let fixture: ComponentFixture<DragNDropComponent>;
+  let component: DragNDropPageComponent;
+  let fixture: ComponentFixture<DragNDropPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DragNDropComponent ]
+      declarations: [ DragNDropPageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DragNDropComponent);
+    fixture = TestBed.createComponent(DragNDropPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

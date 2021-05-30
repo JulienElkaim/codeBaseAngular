@@ -1,0 +1,32 @@
+<div class="cat cat-draggable"
+     clazzOnDragging="blue"
+     [data]="cat1"
+     appDraggable>
+  {{greet(cat1)}}
+</div>
+
+<div class="cat cat-draggable"
+     [data]="cat2"
+     clazzOnDragging="pink"
+     appDraggable>
+  {{greet(cat2)}}
+</div>
+
+<div class="cat cat-droppable"
+     (dropSuccess)="dataReceived($event)"
+     (dropError)="onDropError($event)"
+
+     [validator]="catType.defaultValidator"
+     [transform]="catType.of"
+     clazzOnHover="pulsing-border"
+     clazzOnDropError="error"
+     clazzOnDropSuccess="success"
+     appDroppable>
+  <span *ngIf="!!droppedCat; else emptyMessage">
+    {{droppedCat.meow}}
+  </span>
+  <ng-template #emptyMessage>
+    <span>Drop a cat here to see what it says !</span>
+  </ng-template>
+  <span *ngIf="!!dropErrorMessage" [title]="dropErrorMessage"> Refused!</span>
+</div>

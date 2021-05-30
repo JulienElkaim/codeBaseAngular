@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DndCatsComponent } from './dnd-cats.component';
+import { DemoDndCatsComponent } from './demo-dnd-cats.component';
 
 describe('DndCatsComponent', () => {
-  let component: DndCatsComponent;
-  let fixture: ComponentFixture<DndCatsComponent>;
+  let component: DemoDndCatsComponent;
+  let fixture: ComponentFixture<DemoDndCatsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DndCatsComponent ]
+      declarations: [ DemoDndCatsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DndCatsComponent);
+    fixture = TestBed.createComponent(DemoDndCatsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
