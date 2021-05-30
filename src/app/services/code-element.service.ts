@@ -15,10 +15,13 @@ export class CodeElementService {
 
   build(paths: string[]): Observable<CodeElement[]> {
     return forkJoin(
-      paths.map<Observable<CodeElement>>(path =>
-        this.http.get<string>(environment.githubUrl + path).pipe(
-          map((res: string) => new CodeElement(res, CodeElementService.getFileName(path))),
-          catchError((error: any) => throwError(error || 'GitHub error')))
+      paths.map<Observable<CodeElement>>(path => {
+          let responseObs: Observable<string> = this.http.get(environment.githubUrl + path, {responseType: 'text'});
+          return responseObs.pipe(
+            map((res: string) => new CodeElement(res, CodeElementService.getFileName(path))),
+            catchError((error: any) => throwError(error || 'GitHub error'))
+          );
+        }
       )
     );
 

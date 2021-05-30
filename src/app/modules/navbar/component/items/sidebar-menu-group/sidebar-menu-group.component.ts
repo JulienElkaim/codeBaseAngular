@@ -17,11 +17,9 @@ export class SidebarMenuGroupComponent implements OnInit {
   }
 
   public nodeIsGroup(node: SidebarMenuGroup | SidebarMenuLink): node is SidebarMenuGroup {
-    console.log("isGroup: ", node, (node as SidebarMenuGroup)?.menuNodes);
     return !!(node as SidebarMenuGroup)?.menuNodes;
   }
   public nodeIsLink(node: SidebarMenuGroup | SidebarMenuLink): node is SidebarMenuLink{
-    console.log("isLink: ", node, (node as SidebarMenuLink)?.url);
     return !!(node as SidebarMenuLink)?.url;
   }
 

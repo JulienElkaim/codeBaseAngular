@@ -15,6 +15,10 @@
       &:not(:last-child), &:first-child:last-child {
         border-right: 1px var(--border-color) solid;
       }
+      &:hover:not(.active){
+        cursor: pointer;
+      }
+
       &.active{
         background-color: lightgray;
       }

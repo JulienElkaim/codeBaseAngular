@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CodeElement} from '../../../../model/code-element';
 import {CodeElementService} from "../../../../services/code-element.service";
+import {take} from "rxjs/operators";
 
 @Component({
   selector: 'app-drag-n-drop',
@@ -25,6 +26,9 @@ export class DragNDropComponent implements OnInit {
     this.codeElementService.build([
       "src/app/modules/codes/components/drag-n-drop/src/model/draggable-type.ts",
       "src/app/modules/codes/components/drag-n-drop/src/model/type-validation-error.ts"
-    ])
+    ]).subscribe(res=>{
+      console.log("EH oui", res);
+      this.codeElements = res;
+    })
   }
 }
