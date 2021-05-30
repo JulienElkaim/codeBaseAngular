@@ -10,25 +10,19 @@ import {take} from "rxjs/operators";
 })
 export class DragNDropComponent implements OnInit {
 
-  public codeElements: CodeElement[] = [];
+  interfaceDraggableType: string[] = [
+    "src/app/modules/codes/components/drag-n-drop/src/model/draggable-type.ts",
+    "src/app/modules/codes/components/drag-n-drop/demo/model/cat.ts",
+    "src/app/modules/codes/components/drag-n-drop/demo/model/dog.ts"
+  ] ;
 
-  constructor(private codeElementService: CodeElementService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.getCodeElements();
   }
 
   public log($event: any) {
     console.log($event);
   }
 
-  public getCodeElements(){
-    this.codeElementService.build([
-      "src/app/modules/codes/components/drag-n-drop/src/model/draggable-type.ts",
-      "src/app/modules/codes/components/drag-n-drop/src/model/type-validation-error.ts"
-    ]).subscribe(res=>{
-      console.log("EH oui", res);
-      this.codeElements = res;
-    })
-  }
 }

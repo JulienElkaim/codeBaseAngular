@@ -1,33 +1,40 @@
-:host{
+:host {
   --border-color: #DEDEDE;
   background-color: white;
   border-radius: 4px;
   border: 1px var(--border-color) solid;
   display: block;
 
-  .code-base-header-list{
+  .code-base-header-list {
     display: flex;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
+    overflow-x: auto;
     border-bottom: 1px var(--border-color) solid;
 
-    .code-base-header-item{
+    .code-base-header-item {
+      flex-shrink: 0;
       padding: .7rem 1rem;
+
       &:not(:last-child), &:first-child:last-child {
         border-right: 1px var(--border-color) solid;
       }
-      &:hover:not(.active){
+
+      &:hover:not(.active) {
         cursor: pointer;
       }
 
-      &.active{
+      &.active {
         background-color: lightgray;
       }
     }
   }
-  .code-base-content{
+
+  .code-base-content {
+    overflow-x: auto;
     padding: 1em;
-    code{
+    code.hljs {
       background-color: white;
+      overflow-x: initial;
     }
   }
 }

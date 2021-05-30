@@ -1,4 +1,17 @@
-<div>
-  dnd compo !
-</div>
-<app-code-base [codeElements]="codeElements"></app-code-base>
+<h1 class="page-title">Drag And Drop </h1>
+
+<p class="page-abstract">
+  Directives to transform any tag in a draggable and/or droppable elements. Working with data model and every "JSON parsable
+  element (i.e, Cat and Dog models). This implementation provides validation capability to check if dragged object is
+  compliant with what the droppable element is expecting to receive. Users can also provide a callback to transform dragged
+  object before receiving the DropEvent, with the object inside.
+</p>
+
+<h2 class="page-title">
+  Draggable Directive
+</h2>
+
+<p>
+  To make an object draggable, it has to implement <strong class="code" >DraggableType&ltT&gt</strong>.
+</p>
+<app-code-base [githubRaw]="interfaceDraggableType"></app-code-base>

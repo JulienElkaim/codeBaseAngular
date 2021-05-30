@@ -4,7 +4,9 @@
   .app-content{
     background-color: #f8f9fa;
     flex-grow: 1;
+    overflow:hidden;
     padding-left: 2em;
     padding-right: 2em;
+    padding-top: 1em;
   }
 }

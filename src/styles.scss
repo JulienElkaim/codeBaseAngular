@@ -1,7 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~highlight.js/styles/github.css';
 
-body{
+body {
   font-family: 'Roboto', serif;
   margin: 0;
+}
+
+.page-title {
+  position: relative;
+  padding-top: .5rem;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+  }
+}
+
+h1.page-title {
+  margin-bottom: 3rem;
+
+  &:before {
+    width: 36px;
+    height: 8px;
+  }
+}
+
+h2.page-title {
+  margin-top: 4rem;
+  &:before {
+    width: 24px;
+    height: 6px;
+  }
+}
+
+.page-abstract {
+  color: #444;
+  font-size: .9rem;
+  text-align: center;
+  line-height: 1.4rem;
+  letter-spacing: .01rem;
+  font-style: oblique;
+}
+
+
+strong.code{
+  border: 1px solid lightgray;
+  background: white;
+  padding: 3px 6px;
+  border-radius: 4px;
 }

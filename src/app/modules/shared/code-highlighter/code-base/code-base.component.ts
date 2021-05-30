@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {CodeElement} from "../../../../model/code-element";
+import {CodeElementService} from "../../../../services/code-element.service";
 
 
 @Component({
@@ -11,6 +12,8 @@ export class CodeBaseComponent implements OnInit {
   public codeElementSelected!: CodeElement;
   private _codeElements: CodeElement[] = [];
 
+  public errorMessage?: string;
+
   @Input()
   public set codeElements(value: CodeElement[]) {
     if(!!value){
@@ -18,6 +21,13 @@ export class CodeBaseComponent implements OnInit {
       this.defaultSelect();
     }
   };
+
+  @Input()
+  public set githubRaw(value: string[]){
+    if(!!value){
+      this.getGithubCodeElements(value);
+    }
+  }
 
   private defaultSelect() {
     if(!this.codeElementSelected && this.codeElements && this.codeElements.length){
@@ -28,7 +38,7 @@ export class CodeBaseComponent implements OnInit {
   public get codeElements(): CodeElement[]{
     return this._codeElements;
   }
-  constructor() { }
+  constructor(private codeElementService: CodeElementService) { }
 
   ngOnInit(): void {
   }
@@ -39,5 +49,17 @@ export class CodeBaseComponent implements OnInit {
 
   public selectCodeElement(codeElement: CodeElement) {
     this.codeElementSelected = codeElement;
+  }
+
+  private getGithubCodeElements(value: string[]) {
+    this.codeElementService.build(value).subscribe(res=>{
+      this.codeElements = res;
+    }, err=>{
+      console.log("Ohoh ", err);
+      this.codeElements = [new CodeElement(
+        err.message,
+        "ERROR"
+      )]
+    })
   }
 }
