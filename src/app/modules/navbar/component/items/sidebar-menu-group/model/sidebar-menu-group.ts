@@ -1,4 +1,4 @@
-import {SidebarMenuLink} from "./sidebar-menu-link";
+import {SidebarMenuLink} from "../../sidebar-menu-link/model/sidebar-menu-link";
 
 export class SidebarMenuGroup{
   menuNodes : (SidebarMenuLink | SidebarMenuGroup)[];

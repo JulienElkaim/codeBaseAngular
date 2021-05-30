@@ -4,7 +4,9 @@
 
 
   .sidebar-menu-group-header {
+    position: relative;
     cursor: pointer;
+
     &:hover {
       border-bottom: 1px solid rgba(138, 148, 150, .1);
     }

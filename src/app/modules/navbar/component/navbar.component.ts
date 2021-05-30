@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {SidebarMenuLink} from "./model/sidebar-menu-link";
-import {SidebarMenuGroup} from "./model/sidebar-menu-group";
+import {SidebarMenuLink} from "./items/sidebar-menu-link/model/sidebar-menu-link";
+import {SidebarMenuGroup} from "./items/sidebar-menu-group/model/sidebar-menu-group";
+
 
 @Component({
   selector: 'app-navbar',

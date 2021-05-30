@@ -1,0 +1,11 @@
+<div class="code-base-header-list">
+  <div (click)="selectCodeElement(codeElement)"
+       [ngClass]="{'active': codeElementSelected.fileName == codeElement.fileName}"
+       class="code-base-header-item"
+       *ngFor="let codeElement of codeElements">
+    {{codeElement.fileName}}
+  </div>
+</div>
+<pre class="code-base-content">
+  <code (highlighted)="log($event)" [highlight]="codeElementSelected.code"></code>
+</pre>

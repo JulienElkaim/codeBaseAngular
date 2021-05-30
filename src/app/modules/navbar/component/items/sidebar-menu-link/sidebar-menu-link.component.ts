@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {SidebarMenuLink} from "../../model/sidebar-menu-link";
+import {SidebarMenuLink} from "./model/sidebar-menu-link";
 import {Router} from "@angular/router";
 
 @Component({

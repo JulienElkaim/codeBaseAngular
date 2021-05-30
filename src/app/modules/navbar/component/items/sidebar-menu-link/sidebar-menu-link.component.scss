@@ -1,0 +1,16 @@
+:host{
+  display: block;
+
+  .sidebar-menu-link{
+    display: block;
+    text-decoration: none;
+    color: #8a9496;
+    font-style: italic;
+
+    &:hover, &.active{
+      color: black;
+      font-style: initial;
+    }
+  }
+
+}

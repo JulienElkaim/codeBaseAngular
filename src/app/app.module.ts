@@ -1,26 +1,33 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { HomeComponent } from './home/home.component';
-import { SidebarMenuGroupComponent } from './navbar/items/sidebar-menu-group/sidebar-menu-group.component';
-import { SidebarMenuLinkComponent } from './navbar/items/sidebar-menu-link/sidebar-menu-link.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {HomeComponent} from './home/home.component';
+import {NavbarModule} from './modules/navbar/navbar.module';
+import {HIGHLIGHT_OPTIONS} from "ngx-highlightjs";
+import {CodeElementService} from "./services/code-element.service";
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     HomeComponent,
-    SidebarMenuGroupComponent,
-    SidebarMenuLinkComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NavbarModule
   ],
-  providers: [],
+  providers: [
+    CodeElementService,
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        fullLibraryLoader: () => import('highlight.js'),
+      }
+    }
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

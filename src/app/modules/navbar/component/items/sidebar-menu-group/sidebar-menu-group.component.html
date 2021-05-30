@@ -1,6 +1,7 @@
 <div *ngIf="nodeIsGroup(menuNode)">
   <div class="sidebar-menu-group-header"
        (click)="menuNode.expanded = !menuNode.expanded">
+    <span class="arrow"></span>
     {{getAsGroup()?.label}}
   </div>
   <div [ngClass]="{'expanded': getAsGroup()?.expanded}" class="sidebar-menu-group-content">

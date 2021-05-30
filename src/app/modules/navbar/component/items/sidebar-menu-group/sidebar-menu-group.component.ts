@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {SidebarMenuGroup} from "../../model/sidebar-menu-group";
-import {SidebarMenuLink} from "../../model/sidebar-menu-link";
+import {SidebarMenuGroup} from "./model/sidebar-menu-group";
+import {SidebarMenuLink} from "../sidebar-menu-link/model/sidebar-menu-link";
 
 @Component({
   selector: 'app-sidebar-menu-group',

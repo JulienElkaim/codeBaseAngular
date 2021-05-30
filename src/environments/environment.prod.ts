@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  githubUrl: "https://raw.githubusercontent.com/JulienElkaim/codeBaseAngular/master/"
 };
