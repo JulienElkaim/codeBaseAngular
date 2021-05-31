@@ -1,6 +1,6 @@
 import {DraggableType} from "../../src/model/draggable-type";
 
-export class Dog implements DraggableType<Dog>{
+export class Dog implements DraggableType{
   name: string;
   age: number;
   color: string;

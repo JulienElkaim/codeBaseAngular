@@ -7,7 +7,7 @@ export type DropError = { error: TypeValidationError, value: null | any | string
 @Directive({
   selector: '[appDroppable]'
 })
-export class DroppableDirective<T extends DraggableType<T>> {
+export class DroppableDirective<T extends DraggableType> {
   @Input() type?: new () => T; // Simple declaration for linter, could be dumped in final version.
   @Output() dropSuccess = new EventEmitter<T>();
   @Output() dropError = new EventEmitter<DropError>();
@@ -98,7 +98,7 @@ export class DroppableDirective<T extends DraggableType<T>> {
 
   private removeClasses(classes: string[]) {
     classes.forEach(clazz => {
-      this.sanitizedClass(clazz).split(" ").forEach(subClazz => {
+      DroppableDirective.sanitizedClass(clazz).split(" ").forEach(subClazz => {
         this.renderer.removeClass(this.elementRef.nativeElement, subClazz);
       });
     });
@@ -106,13 +106,13 @@ export class DroppableDirective<T extends DraggableType<T>> {
 
   private addClasses(classes: string[]) {
     classes.forEach(clazz => {
-      this.sanitizedClass(clazz).split(" ").forEach(subClazz =>
+      DroppableDirective.sanitizedClass(clazz).split(" ").forEach(subClazz =>
         this.renderer.addClass(this.elementRef.nativeElement, subClazz)
       );
     });
   }
 
-  private sanitizedClass(clazz: string): string {
+  private static sanitizedClass(clazz: string): string {
     return clazz.trim().split("( )*").join(" ");
   }
 }

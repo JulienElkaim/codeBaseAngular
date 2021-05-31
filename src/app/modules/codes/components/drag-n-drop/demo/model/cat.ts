@@ -1,6 +1,6 @@
 import {DraggableType} from "../../src/model/draggable-type";
 
-export class Cat implements DraggableType<Cat>{
+export class Cat implements DraggableType{
   name: string;
   age: number;
   meow: string;

@@ -1,3 +1,3 @@
-export abstract class DraggableType<T> {
+export abstract class DraggableType {
   abstract getDraggableValue(): string;
 }

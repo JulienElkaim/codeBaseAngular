@@ -17,10 +17,12 @@ export class DragNDropPageComponent implements OnInit {
   ] ;
 
   demoCodeFiles: string[] = [
-    "src/app/modules/codes/components/drag-n-drop/demo/model/demo-dnd-cats/demo-dnd-cats.component.html",
-    "src/app/modules/codes/components/drag-n-drop/demo/model/demo-dnd-cats/demo-dnd-cats.component.ts",
-    "src/app/modules/codes/components/drag-n-drop/demo/model/demo-dnd-dogs/demo-dnd-dogs.component.html",
-    "src/app/modules/codes/components/drag-n-drop/demo/model/demo-dnd-dogs/demo-dnd-dogs.component.ts"
+    "src/app/modules/codes/components/drag-n-drop/demo/components/demo-dnd-cats/demo-dnd-cats.component.html",
+    "src/app/modules/codes/components/drag-n-drop/demo/components/demo-dnd-cats/demo-dnd-cats.component.ts",
+    "src/app/modules/codes/components/drag-n-drop/demo/components/demo-dnd-dogs/demo-dnd-dogs.component.html",
+    "src/app/modules/codes/components/drag-n-drop/demo/components/demo-dnd-dogs/demo-dnd-dogs.component.ts",
+    "src/app/modules/codes/components/drag-n-drop/demo/model/cat.ts",
+    "src/app/modules/codes/components/drag-n-drop/demo/model/dog.ts"
   ] ;
 
   draggableDirective: string[] = [

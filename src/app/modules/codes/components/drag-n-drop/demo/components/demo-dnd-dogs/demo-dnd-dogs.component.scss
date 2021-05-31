@@ -4,12 +4,13 @@
   align-items: stretch;
 
   .dog {
+    width: 150px;
+    border-radius: 8px;
     padding: 2rem 3rem;
-    border: 1px lightgrey solid;
+    border: 1px lightgrey dashed;
 
     &.dog-draggable {
       background: white;
-      margin-left: auto;
 
       &.blue {
         color: blue;
@@ -22,7 +23,7 @@
     }
 
     &.dog-droppable {
-      background-color: grey;
+      background-color: #acdc;
 
       &.success {
         background-color: #33FF3355;

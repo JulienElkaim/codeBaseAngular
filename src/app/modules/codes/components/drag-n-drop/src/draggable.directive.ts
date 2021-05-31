@@ -4,7 +4,7 @@ import {DraggableType} from "./model/draggable-type";
 @Directive({
   selector: '[appDraggable]'
 })
-export class DraggableDirective<T extends DraggableType<T>> {
+export class DraggableDirective<T extends DraggableType> {
   @Input() data!: T;
   @Input() clazzOnDragging!: string;
   @Input() dragStartCallBack!: (data: T) => void;
