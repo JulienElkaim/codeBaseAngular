@@ -27,3 +27,16 @@ Don't forget the ```demo``` preffix.
 
 Don't forget to add the route to ```codes-routing.module.ts```
 Don't forget to create a link in ```navbar.component.ts``` to access it.
+
+
+
+## TODO LIST 
+
+- [X] Drag and Drop objects
+- [ ] Blob files INPUT/OUTPUT (Hudson output, Mohawk input)
+- [X] JSON Editor
+- [ ] Toastr system passable partout (to do)
+- [ ] Form Group & Form Control pour validation system (todo or Taurus)
+- [ ] Stores pour partager gestion des data (Un service qui donne des BehavioralSubject)
+- [ ] async pipe (Un pipe qui agit sur resultat d'un observable et qui gere unsub?) (todo)
+
