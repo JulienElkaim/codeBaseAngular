@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 
 import {CodesRoutingModule} from './codes-routing.module';
-import {CodesComponent} from './codes.component';
 import {SharedModule} from "../shared/shared.module";
 import { DragNDropPageComponent } from './components/drag-n-drop/drag-n-drop-page.component';
 import { DraggableDirective } from './components/drag-n-drop/src/draggable.directive';
@@ -12,7 +11,6 @@ import {DemoDndDogsComponent} from "./components/drag-n-drop/demo/components/dem
 
 @NgModule({
   declarations: [
-    CodesComponent,
     DragNDropPageComponent,
     DraggableDirective,
     DroppableDirective,

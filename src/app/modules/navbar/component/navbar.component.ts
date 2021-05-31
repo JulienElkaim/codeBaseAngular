@@ -29,8 +29,24 @@ export class NavbarComponent implements OnInit {
       expanded: true,
       menuNodes:[
         {
-          url: "/codes",
-          label: "Introduction"
+          label: 'Pipes',
+          expanded: false,
+          menuNodes:[
+            {
+              url: "/",//"/codes/pipes/sortBy",
+              label: "Sort By"
+            }
+          ]
+        },
+        {
+          label: 'Directives',
+          expanded: false,
+          menuNodes: [
+            {
+              url: "/codes/directives/drag-n-drop",
+              label: "Drag And Drop"
+            }
+          ]
         }
       ]
     }
