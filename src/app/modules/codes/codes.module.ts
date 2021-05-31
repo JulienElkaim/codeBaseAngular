@@ -14,6 +14,10 @@ import { DemoJsonEditorComponent } from './components/json-editor/demo/demo-json
 import { OrderByPageComponent } from './components/order-by/order-by-page.component';
 import { OrderByPipe } from './components/order-by/src/order-by.pipe';
 import {DemoOrderByComponent} from "./components/order-by/demo/demo-order-by/demo-order-by.component";
+import { GroupByPageComponent } from './components/group-by/group-by-page.component';
+import { GroupArrayByPipe } from './components/group-by/src/group-by.pipe';
+import {KeyValuePipe} from "@angular/common";
+import { DemoGroupByComponent } from './components/group-by/demo/demo-group-by/demo-group-by.component';
 
 
 @NgModule({
@@ -31,7 +35,10 @@ import {DemoOrderByComponent} from "./components/order-by/demo/demo-order-by/dem
 
     OrderByPageComponent,
     OrderByPipe,
-    DemoOrderByComponent
+    DemoOrderByComponent,
+    GroupByPageComponent,
+    GroupArrayByPipe,
+    DemoGroupByComponent
 
   ],
   imports: [
@@ -39,7 +46,8 @@ import {DemoOrderByComponent} from "./components/order-by/demo/demo-order-by/dem
     CodesRoutingModule
   ],
   providers: [
-    JsonUtilService
+    JsonUtilService,
+    KeyValuePipe
   ]
 })
 export class CodesModule {

@@ -34,7 +34,11 @@ export class NavbarComponent implements OnInit {
           menuNodes:[
             {
               url: "/codes/pipes/order-by",
-              label: "Order By"
+              label: "Order by"
+            },
+            {
+              url: "/codes/pipes/group-by",
+              label: "Group arrays by"
             }
           ]
         },

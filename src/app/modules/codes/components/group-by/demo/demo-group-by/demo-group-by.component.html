@@ -1,0 +1,15 @@
+<div>
+  <button (click)="groupingProvider = defaultGrouping">Group Users by age</button>
+  <button (click)="groupingProvider= catNameGrouping">Make groups by is the user having a cat name</button>
+</div>
+
+<p>User groups:</p>
+  <ul class="user-group" *ngFor="let group of users | groupArrayBy : groupingProvider">
+    <div class="group-name">
+      {{group.key}}
+    </div>
+
+    <li *ngFor="let user of group.value">
+      {{user.name}} is {{user.age}} years old.
+    </li>
+  </ul>

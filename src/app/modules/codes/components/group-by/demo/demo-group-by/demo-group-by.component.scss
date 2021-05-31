@@ -1,0 +1,12 @@
+.user-group{
+  border: 2px dotted grey;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 1rem 0;
+  .group-name{
+    text-align: end;
+    color: grey;
+    font-style: italic;
+  }
+
+}

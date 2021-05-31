@@ -1,0 +1,34 @@
+<h1 class="page-title">Generic Array Grouping </h1>
+
+<p class="page-abstract">
+  Pipe to group any array of objects, either by a given property's value or by providing a callback
+  able to categorize elements of the provided list.
+</p>
+
+<div class="page-demo">
+  <app-demo-group-by></app-demo-group-by>
+</div>
+<app-code-base [githubRaw]="demoFiles"></app-code-base>
+
+<h2 class="page-title">
+  Usage
+</h2>
+
+<p class="page-text">
+  You have 2 options to group items of your list:
+</p>
+<ul>
+  <li>Provide a property name, groups will be built by string representation of values.</li>
+  <li>Provide a callback able to receive one element of your list and match it to a list of group labels.</li>
+</ul>
+<p>
+  PS: to group items inside an Object, Angular provide <strong class="code">orderBy</strong> pipe.
+</p>
+
+<h2 class="page-title">
+  Sources
+</h2>
+<p class="page-text">
+  Standalone pipe. Source code as following:
+</p>
+<app-code-base [githubRaw]="sourceFile"></app-code-base>
