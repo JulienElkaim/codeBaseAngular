@@ -2,13 +2,17 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {DragNDropPageComponent} from "./components/drag-n-drop/drag-n-drop-page.component";
 import {JsonEditorPageComponent} from "./components/json-editor/json-editor-page.component";
+import {OrderByPageComponent} from "./components/order-by/order-by-page.component";
 
 const routes: Routes = [
+  {
+    path: 'pipes/order-by', component: OrderByPageComponent
+  },
   {
     path: 'directives/drag-n-drop', component: DragNDropPageComponent
   },
   {
-    path: 'directives/json-editor', component: JsonEditorPageComponent,
+    path: 'directives/json-editor', component: JsonEditorPageComponent
   }
 ];
 

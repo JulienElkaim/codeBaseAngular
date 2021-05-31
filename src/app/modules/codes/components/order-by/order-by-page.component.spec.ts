@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OrderPipePageComponent } from './order-pipe-page.component';
+import { OrderByPageComponent } from './order-by-page.component';
 
 describe('SortPipePageComponent', () => {
-  let component: OrderPipePageComponent;
-  let fixture: ComponentFixture<OrderPipePageComponent>;
+  let component: OrderByPageComponent;
+  let fixture: ComponentFixture<OrderByPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OrderPipePageComponent ]
+      declarations: [ OrderByPageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OrderPipePageComponent);
+    fixture = TestBed.createComponent(OrderByPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

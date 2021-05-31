@@ -2,10 +2,10 @@ import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-sort-pipe-page',
-  templateUrl: './order-pipe-page.component.html',
-  styleUrls: ['./order-pipe-page.component.scss']
+  templateUrl: './order-by-page.component.html',
+  styleUrls: ['./order-by-page.component.scss']
 })
-export class OrderPipePageComponent implements OnInit {
+export class OrderByPageComponent implements OnInit {
   demoFiles: string[] = [
     "src/app/modules/codes/components/order-by/demo/demo-order-by/demo-order-by.component.html",
     "src/app/modules/codes/components/order-by/demo/demo-order-by/demo-order-by.component.scss",

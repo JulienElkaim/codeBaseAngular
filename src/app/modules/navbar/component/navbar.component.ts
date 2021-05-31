@@ -33,8 +33,8 @@ export class NavbarComponent implements OnInit {
           expanded: false,
           menuNodes:[
             {
-              url: "/",//"/codes/pipes/sortBy",
-              label: "Sort By"
+              url: "/codes/pipes/order-by",
+              label: "Order By"
             }
           ]
         },

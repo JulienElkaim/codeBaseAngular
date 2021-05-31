@@ -16,6 +16,7 @@ export class DemoOrderByComponent implements OnInit {
     {name: 'Julien', age: "26"},
     {name: 'Julian', age: "30"},
     {name: 'Chloe', age: "25"},
+    {name: 'Chloe', age: "2"},
     {name: 'Antoine', age: "50"},
     {name: 'Brahim', age: "10"},
     {name: 'Gwen', age: "25"}

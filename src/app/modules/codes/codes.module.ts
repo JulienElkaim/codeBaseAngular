@@ -11,7 +11,7 @@ import { JsonEditorPageComponent } from './components/json-editor/json-editor-pa
 import {JsonEditorDirective} from "./components/json-editor/src/json-editor.directive";
 import {JsonUtilService} from "./components/json-editor/src/json-util.service";
 import { DemoJsonEditorComponent } from './components/json-editor/demo/demo-json-editor/demo-json-editor.component';
-import { OrderPipePageComponent } from './components/order-by/order-pipe-page.component';
+import { OrderByPageComponent } from './components/order-by/order-by-page.component';
 import { OrderByPipe } from './components/order-by/src/order-by.pipe';
 import {DemoOrderByComponent} from "./components/order-by/demo/demo-order-by/demo-order-by.component";
 
@@ -29,7 +29,7 @@ import {DemoOrderByComponent} from "./components/order-by/demo/demo-order-by/dem
     DemoJsonEditorComponent,
 
 
-    OrderPipePageComponent,
+    OrderByPageComponent,
     OrderByPipe,
     DemoOrderByComponent
 
