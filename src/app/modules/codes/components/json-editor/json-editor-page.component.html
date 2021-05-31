@@ -1,8 +1,28 @@
-<h1 class="page-title">Json Editor <i>(Without external dependencies)</i></h1>
+<h1 class="page-title">Json Editor <i>(no external dependencies)</i></h1>
 
+<p class="page-abstract">
+  Directive to transform any tag as a simple JSON editor. This implementation avoid to import heavy library for
+  a very simple need as JSON-friendly input field or JSON displayer. Caret position lost when validation occurs.
+</p>
 
 <div class="page-demo">
   <app-demo-json-editor>
   </app-demo-json-editor>
 </div>
 <app-code-base [githubRaw]="demoFiles"></app-code-base>
+
+<h2 class="page-title">
+  Usage
+</h2>
+
+<p class="page-text">
+  Simply add the directive <strong class="code">appJsonEditor</strong> to the tag
+  you want to transform as an editor (see demo-json-editor.component.html).
+
+</p>
+<app-code-base [githubRaw]="htmlDemoFile"></app-code-base>
+
+<p class="page-text">
+  Directive and utils code are as following:
+</p>
+<app-code-base [githubRaw]="directiveSources"></app-code-base>

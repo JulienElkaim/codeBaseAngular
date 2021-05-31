@@ -48,7 +48,7 @@ export class NavbarComponent implements OnInit {
             },
             {
               url: "/codes/directives/json-editor",
-              label: "JSON Editor (light)"
+              label: "JSON Editor"
             }
           ]
         }

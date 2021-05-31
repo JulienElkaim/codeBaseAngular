@@ -8,7 +8,7 @@ import {Subject} from "rxjs";
 })
 export class DemoJsonEditorComponent implements OnInit {
   isAutoValidationActivated: boolean = false;
-  demoValue: string = '{}';
+  demoValue: string = '{"Example" : "Modify me and check if your JSON format is correct !"}';
   manualTrigger: Subject<void> = new Subject<void>();
   public errorMessage?: string;
 
