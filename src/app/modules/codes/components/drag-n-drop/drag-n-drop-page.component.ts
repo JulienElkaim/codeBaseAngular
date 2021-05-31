@@ -16,6 +16,22 @@ export class DragNDropPageComponent implements OnInit {
     "src/app/modules/codes/components/drag-n-drop/demo/model/dog.ts"
   ] ;
 
+  demoCodeFiles: string[] = [
+    "src/app/modules/codes/components/drag-n-drop/demo/model/demo-dnd-cats/demo-dnd-cats.component.html",
+    "src/app/modules/codes/components/drag-n-drop/demo/model/demo-dnd-cats/demo-dnd-cats.component.ts",
+    "src/app/modules/codes/components/drag-n-drop/demo/model/demo-dnd-dogs/demo-dnd-dogs.component.html",
+    "src/app/modules/codes/components/drag-n-drop/demo/model/demo-dnd-dogs/demo-dnd-dogs.component.ts"
+  ] ;
+
+  draggableDirective: string[] = [
+    "src/app/modules/codes/components/drag-n-drop/src/draggable.directive.ts"
+  ] ;
+
+
+  droppableDirective: string[] = [
+    "src/app/modules/codes/components/drag-n-drop/src/droppable.directive.ts"
+  ] ;
+
   constructor() { }
 
   ngOnInit(): void {

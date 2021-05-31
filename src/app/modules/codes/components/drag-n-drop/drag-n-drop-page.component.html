@@ -16,6 +16,9 @@
   <app-demo-dnd-dogs></app-demo-dnd-dogs>
 
 </div>
+<app-code-base [githubRaw]="demoCodeFiles"></app-code-base>
+<br>
+
 <h2 class="page-title">
   Draggable Directive
 </h2>
@@ -29,8 +32,12 @@
 </p>
 <app-code-base [githubRaw]="interfaceDraggableType"></app-code-base>
 
+
 <br>
 
 <p>
-  To provide
+  Then simply add the dirrective <strong class="code">appDraggable</strong> on the DOM item to drag (see demo), and use
+  provided input / outputs to interface with the drag life cycle:
 </p>
+<app-code-base [githubRaw]="draggableDirective"></app-code-base>
+
