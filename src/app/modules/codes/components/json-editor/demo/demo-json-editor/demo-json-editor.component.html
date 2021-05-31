@@ -1,0 +1,33 @@
+
+<div class="auto-validation-message">
+  <label for="auto-validation">
+    {{((isAutoValidationActivated ? 'disable': 'enable') | titlecase)}} auto validation mode
+    (2s delay after editing)
+  </label>
+  <input type="checkbox" id="auto-validation"
+         [(ngModel)]="isAutoValidationActivated">
+</div>
+
+  <div appJsonEditor
+       class="demo-json-editor"
+       [delayMS]="2000"
+       clazzOnSuccess="editor-success"
+       clazzOnError="editor-error"
+       [prettifyOnValueChange]="false"
+       [manualPrettify]="manualTrigger"
+       (valueChange)="onChange($event)"
+       [autoPrettify]="isAutoValidationActivated"
+       (prettifyError)="errorMessage = $event"
+       (prettifySuccess)="errorMessage = undefined"
+       [(value)]="demoValue">
+  </div>
+
+  <div class="hint-message">
+    Validate JSON format using
+    <button class="validate-button" (click)="manualTrigger.next()">Validate</button>
+    or press ctrl + Enter
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    Invalid input: {{errorMessage}}
+  </div>

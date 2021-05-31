@@ -1,0 +1,48 @@
+:host{
+
+  .auto-validation-message, .hint-message{
+    margin: 1rem 0;
+    font-family: Arial, sans-serif;
+    color: #cacaca;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .demo-json-editor, .error-message{
+    background-color: white;
+    color: #888;
+  }
+
+  .demo-json-editor{
+    border-radius: 4px;
+    border: 1px solid lightgrey;
+    padding: 2rem;
+    font-size: .8rem;
+
+    &.editor-success{
+     border: 1px solid green;
+    }
+    &.editor-error{
+      border: 1px solid red;
+    }
+  }
+
+  .hint-message{
+    .validate-button{
+      cursor: pointer;
+      padding: .5rem 1rem;
+      margin: 0 .25rem;
+      background-color: #88FF88;
+      color: #00AF00;
+      border: none;
+      font-weight: bold;
+    }
+  }
+
+  .error-message{
+    text-align: center;
+    padding: 1rem 1.5rem;
+    background-color: #FF8888AA;
+  }
+}

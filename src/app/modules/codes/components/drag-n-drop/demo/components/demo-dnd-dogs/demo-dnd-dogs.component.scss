@@ -25,6 +25,10 @@
     &.dog-droppable {
       background-color: #acdc;
 
+      &.border-dashed{
+        border: 2px grey dashed;
+      }
+
       &.success {
         background-color: #33FF3355;
       }

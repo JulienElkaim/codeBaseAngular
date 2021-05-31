@@ -45,6 +45,10 @@ export class NavbarComponent implements OnInit {
             {
               url: "/codes/directives/drag-n-drop",
               label: "Drag And Drop"
+            },
+            {
+              url: "/codes/directives/json-editor",
+              label: "JSON Editor (light)"
             }
           ]
         }
