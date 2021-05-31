@@ -25,5 +25,5 @@ ng g component modules/codes/components/component-name-page/demo/demo-component-
 ```
 Don't forget the ```demo``` preffix.
 
-
+Don't forget to add the route to ```codes-routing.module.ts```
 Don't forget to create a link in ```navbar.component.ts``` to access it.

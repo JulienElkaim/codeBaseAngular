@@ -1,0 +1,12 @@
+<div>
+  <button (click)="propertyName = 'name'">Order by Name</button>
+  <button (click)="propertyName='age'">Order by Age</button>
+</div>
+
+<p>Users filtered by {{propertyName}}:</p>
+<ul>
+  <li *ngFor="let user of users | orderByProperty : propertyName ">
+    {{user.name}} is {{user.age}} years old.
+  </li>
+
+</ul>
